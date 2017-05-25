@@ -27,3 +27,6 @@ Contient les repertoires css et js
 
 Les fichier .htacess pour les regles de reecriture zend de redirection apaches
 et index.php pour lancer l'application
+
+
+Les reponses aux questions dans le wiki
