@@ -16,11 +16,9 @@ class UserModel extends Model
      */
     public function __construct($path)
     {
-        echo "<br>";
-        var_dump(__CLASS__);
+
         parent::__construct($path);
         $this->adresse = new AdressModel("User");
-        var_dump($this->adresse);
     }
 
     /**

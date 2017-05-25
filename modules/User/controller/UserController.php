@@ -37,7 +37,6 @@ class UserController extends Controller
     public function __construct($view)
     {
         $user = new UserModel("User");
-        var_dump($user);
         $this->setModel($user);
         parent::__construct($view);
 

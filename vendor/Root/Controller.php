@@ -15,8 +15,7 @@ class Controller
      */
     function __construct($view)
     {
-        echo "<br>";
-        var_dump(__CLASS__);
+;
         $this->render($view);
     }
 

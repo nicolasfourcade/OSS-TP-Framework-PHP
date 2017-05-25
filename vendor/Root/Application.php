@@ -39,8 +39,6 @@ class Application
      */
     public function call($URI = null)
     {
-        echo "<br>";
-        var_dump(__CLASS__);
 
         if (is_null($URI)) {
             $URI = $_SERVER['REQUEST_URI'];
