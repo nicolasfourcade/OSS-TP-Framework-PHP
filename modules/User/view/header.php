@@ -1,9 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: nicolas
- * Date: 03/05/17
- * Time: 09:09
- */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>MVC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSS-TP-framework php MVC </title>
 
-echo "*************ici le header*************";
+<link href="<?php echo URLASSET . DS . 'css/styles.css'?>" rel="stylesheet">
+
+    <div class="navigation">
+        <a href="/">Home</a>
+        <a href="/User">Utilisateurs</a>
+    </div>

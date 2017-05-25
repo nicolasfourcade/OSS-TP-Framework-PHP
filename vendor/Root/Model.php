@@ -12,11 +12,11 @@ class Model
 
     public function __construct($path)
     {
-        echo "<br>";
-        var_dump(__CLASS__);
         $bdd = new Bdd(MODPATH.DS.$path."/bdd.conf");
         $ncn = new ConnectBdd($bdd->load());
+
         $this->cn = $ncn->getConnect();
+
     }
 
     public function load($query){

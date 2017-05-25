@@ -5,9 +5,11 @@
  * Date: 03/05/17
  * Time: 11:33
  */
+
 class UserModel extends Model
 {
 
+    private $adresse;
     /**
      * UserModel constructor.
      * @param $path
@@ -17,6 +19,8 @@ class UserModel extends Model
         echo "<br>";
         var_dump(__CLASS__);
         parent::__construct($path);
+        $this->adresse = new AdressModel("User");
+        var_dump($this->adresse);
     }
 
     /**

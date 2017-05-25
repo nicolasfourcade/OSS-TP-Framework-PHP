@@ -66,7 +66,7 @@ class Application
         if (
         isset($routes[$index]['model'])
         ) {
-            $model= $this->loadModel($uri);
+            $model= $this->loadModels();
         }
 
         /**

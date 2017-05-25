@@ -14,6 +14,7 @@ define( 'ROOTPATH', join( DS, array(dirname(__DIR__))) );
 define( 'CONFPATH', join( DS, array(dirname(__DIR__), 'config')) );
 define( 'MODPATH', join( DS, array(dirname(__DIR__), 'modules')) );
 define( 'TEMPLATEPATH', join( DS, array(dirname(__DIR__), 'modules/Oss/view/_template')) );
+define( 'URLASSET', join( DS, array(dirname(__DIR__), 'www')) );
 
 if( $dir = opendir( __DIR__ ) ){
     while( false !== ($file = readdir( $dir )) ) {

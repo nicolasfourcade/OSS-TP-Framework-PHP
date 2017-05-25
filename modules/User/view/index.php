@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>MVC</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <?php
+
+
     include_once 'header.php';
+
+    $model = $this->getModel()->allUsers();
     ?>
     <!-- JS -->
     <!-- please note: The JavaScript files are loaded in the footer to speed up page construction -->
 
     <!-- CSS -->
-    <link href="<?php echo 'URL'; ?>www/css/style.css" rel="stylesheet">
 </head>
 <body>
 <!-- logo -->
@@ -20,26 +17,28 @@
     MON LOGO
 </div>
 
-<!-- navigation -->
-<div class="navigation">
-    <a href="#">home</a>
-    <a href="#">subpage</a>
-    <a href="#">subpage 2</a>
-    <a href="#">user</a>
+<div id="container">
+    <div id="header"><h1>Les utilisateurs OSS</h1></div>
+    <div id="wrapper">
+        <div id="content">
+            <table>
+                <?php
+
+                foreach ($model as $value) {
+                    echo "<tr><td>" . $value['firstname'] . "</td><td>" . $value['lastname'] . "</td><tr>";
+                }
+                ?>
+            </table>
+
+    <div id="extra">
+    </div>
+    <div id="footer">
+        <p>Footer</p>
+    </div>
 </div>
+</body>
 
-<h1>Les utilisateurs connus</h1>
 
-<table>
-    <?php
-    $model = array(0=>array( "idUser"=>  "1" ,"firstName"=> "guillaume", "lastName"=>"briot", "password"=>  "briot" ,"email"=> "guillaume@briot" ));
-    $model = $this->getModel()->allUsers();
-    var_dump($this->getModel()->allUsers());
-    foreach ($model as $value) {
-        echo "<tr><td>" . $value['firstName'] . "</td><td>" . $value['lastName'] . "</td><tr>";
-    }
-    ?>
-</table>
 
 
 <!-- jQuery, loaded in the recommended protocol-less way -->
