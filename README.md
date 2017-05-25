@@ -20,11 +20,17 @@ Contient le routage
 
 Contient la partie applicative decouper en module chacun contient le modele-vue-controller de la partie applicative.
 
-## * 3.2 Interconnexion avec la base de données
+###  Partie questions 3.2
 
-#### * Question 1 : 
+#### Question 1 : 
 Si vous n avez mis en place aucun système pour gérer les instances de votre
 classe qui vous permettra de vous connecter à la base de données, nous constatons un
 problème, lequel ?
 
 Lors de l'appel de l'obkjet on relance un connexion avec ouverture sur une table . Alors que l'utilisateur et l'adresse sont liés ces deux classe ne devrait faire l'objet que d'une seule tentative et ouverture.
+
+#### Question 2 : 
+
+Donnez une solution pour éviter ce problème, puis rajouter cette fonctionnalité à votre framework.
+
+Une solution serait de lier les classes et leu appel par un systeme d'injection de dépendances.
